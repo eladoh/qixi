@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <link type="text/css" rel="stylesheet" href="./css/default.css">
+<!--     <link type="text/css" rel="stylesheet" href="./css/default.css"> -->
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/jscex.js"></script>
     <script type="text/javascript" src="./js/jscex-parser.js"></script>
@@ -27,17 +27,15 @@
     <style>
       img {
         width: 100%;
-        opacity: 1;
       }
-/*      body {
-
+      body {
         min-height: 100vh;
-        background: linear-gradient(#1d2b64, #f8cdda);
-        color: #fff;
+        background: #ffe;
+/*        color: #fff;*/
         font-family: PingFangSC-Regular;
         padding: 0;
         margin: 0;
-      }*/
+      }
       .avatar {
         width: 44px;
         height: 44px;
@@ -61,6 +59,7 @@
         text-align: center;
       }
       .sure {
+        color: #fff;
         padding: 14px 0;
         background: linear-gradient(
           180deg,
@@ -69,7 +68,6 @@
         );
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
-        color: #fff;
       }
       .cancel {
         padding: 14px 0;
@@ -87,24 +85,17 @@
           margin: 0 auto;
         }
       }
-
-            .modal-body {
-        padding: 0px;
-        margin: 0px;
-        z-index: 10;
-      }
-
-      .modal-backdrop{
-        z-index: 2;
-      }
     </style>
   </head>
 
   <body>
+
+   <div class="container">
+    <div style="padding: 12px">
      <!--这里放音乐哦 -->
-    <audio autoplay="autopaly">
+<!--     <audio autoplay="autopaly">
       <source src="./iloveu.mp3" audio="" mp3="">
-    </audio>
+    </audio> -->
 
 
 
@@ -120,7 +111,7 @@
         >
           <img src="avatar.jpg" alt="" class="avatar" />
           <img src="avatar.jpg" alt="" class="avatar shadow" />
-          <span style="margin-left: 10px" id="name">小皮咖</span>
+          <span style="margin-left: 10px" id="name"></span>
         </div>
         <marquee scrolldelay="0" scrollamount="20">
           <img src="1.png" />
@@ -148,8 +139,8 @@
           <div class="cancel">取消</div>
         </div>
 
-
-         </div>
+      </div>
+    </div>
 
 
   <div id="modalSure" class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -183,6 +174,7 @@
       </div>
     </div>
   </div>
+
 
 
     <script>
