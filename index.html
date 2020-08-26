@@ -8,7 +8,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!--     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+ <script src="jquery-3.5.1.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -198,22 +199,22 @@
           <img src="6.png" />
           <img src="7.png" />
         </marquee>
-        <audio
+<!--         <audio
           src="http://att.chinauui.com/day_181211/20181211_8480d0323003455bd6de8CcQ3Eq28Mm9.mp3"
           autoplay
           loop
         >
           您的浏览器不支持 audio 标签。
-        </audio>
+        </audio> -->
 
 
         <div class="btn-group">
           
 <!--           <div class="buttons"> -->
-            <div class="sure" >
+            <div class="sure" id="sure1">
             确定
             </div>
-          <div class="cancel">取消</div>
+          <div class="cancel" id="cancel1">取消</div>
 <!--         </div> -->
 <!--         <a role="button" class="sure one" id="one">确定</a>
         <a role="button" class="cancel second" id="second">取消</a> -->
@@ -260,18 +261,40 @@
     <script type="text/javascript">
       
 
-            $(".sure").on('click touchstart', function(){
-          $("#modalSure").modal("show");
+      var sureButton = document.getElementById("sure1");
+      sureButton.addEventListener("click", function(){
+        // alert("七夕节快乐\\(^o^)/~");
+        $("#modalSure").modal("show");
       })
 
-      $(".cancel").on('click touchstart', function(){
-          $("#modalCancel").modal("show");
+      var cancelButton = document.getElementById("cancel1");
+      cancelButton.addEventListener("click", function(){
+        $("#modalCancel").modal("show");
       })
+
 
       $('#modalSure').on('hidden.bs.modal', function(){  
-         window.location.replace("https://eladoh.github.io/qixi2/");
+         window.location.replace("https://webpage1-5gyp1obo6da37318-1302960401.tcloudbaseapp.com");
       })
     </script>
+<!-- 
+    <script type="text/javascript">
+      
+            $(".sure").on('click', function(){
+            alert("七夕节快乐\\(^o^)/~");
+            window.location.replace("https://webpage1-5gyp1obo6da37318-1302960401.tcloudbaseapp.com");
+
+      })
+
+      $(".cancel").on('click', function(){
+          alert("取消无效，请重新选择");
+      })
+
+
+
+
+
+    </script> -->
   </body>
 
 
